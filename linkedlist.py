@@ -2,6 +2,7 @@ class Node:
     def __init__(self,data):
         self.data=data
         self.next=None
+
 #reversing a linked list
 
 def Reverse(head):
@@ -15,18 +16,20 @@ def Reverse(head):
     return prev
 
 #check if the list a palindrome or not
-# def palindrome(head):
-#     val=[]
-#     curr=head
-#     while curr!=None:
-#         val.append(curr.data)
-#         curr=curr.next
-#     if val==val[::-1]:
-#         return True
-#     else:
-#         return False
+
+def palindrome(head):
+    val=[]
+    curr=head
+    while curr!=None:
+        val.append(curr.data)
+        curr=curr.next
+    if val==val[::-1]:
+        return True
+    else:
+        return False
 
 #searching for an element in a linked list
+
 def Search(head,key):
     curr=head
     while curr!=None:
@@ -53,11 +56,12 @@ for i in range(n):
         tail = node    
 
 
+print(f" Status of Element which was searched :{Search(head,key)"})
+print(f" Is it palindrome ? {palindrome(head)}")
 
-# head=Reverse(head)
-# temp=head
-# while temp!=None:
-#     print(temp.data,end=" ")
-#     temp=temp.next
+head=Reverse(head)
+temp=head
+while temp!=None:
+    print(temp.data,end=" ")
+    temp=temp.next
     
-print(Search(head,key))
